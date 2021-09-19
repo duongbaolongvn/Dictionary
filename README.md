@@ -1,2 +1,3 @@
 # Dictionary
-Tú, Dương và những người bạn
+
+Dương và những người bạn
