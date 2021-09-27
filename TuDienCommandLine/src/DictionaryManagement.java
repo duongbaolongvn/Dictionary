@@ -22,32 +22,21 @@ public class DictionaryManagement {
         } catch (IOException e) {}
     }
     public static void dictionaryLookup() {
-        try {
-            Scanner sc = new Scanner(System.in);
-            Path path = Path.of("D:\\OOP\\TuDien.txt");
-            List<String> dictionary_data = Files.readAllLines(path);
-            while (true) {
-                System.out.println("Tu can tim: ");
-                String search = sc.next();
-                int num = dictionary_data.size();
-                dic = new Word[num];
-                int pos = 0;
-                String x, y;
-                for (String word_data : dictionary_data) {
-                    String[] data = word_data.split("\\s", 2);
-                    x = data[0];
-                    y = data[1];
-                    dic[pos] = new Word(x, y);
-                    if (dic[pos].getWord_target().contains(search)) {
-                        System.out.format("%-7s %-15s %-15s",
-                                "",
-                                "|" + dic[pos].getWord_target(),
-                                "|" + dic[pos].getWord_explain());
-                        System.out.println();
-                    }
+        System.out.println();
+        System.out.println("Tu can tim: ");
+        Scanner sc = new Scanner(System.in);
+        while(true) {
+            String search = sc.next();
+            for (int i = 0; i < dic.length; i++) {
+                if (dic[i].getWord_target().contains(search)) {
+                    System.out.format("%-7s %-15s %-15s",
+                            "",
+                            "|" + dic[i].getWord_target(),
+                            "|" + dic[i].getWord_explain());
+                    System.out.println();
                 }
             }
-        } catch (IOException e) {}
+        }
     }
     public static void insertFromCommanline() {
         Scanner scan = new Scanner(System.in);
