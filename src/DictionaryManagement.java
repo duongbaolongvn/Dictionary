@@ -1,8 +1,27 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Arrays;
 public class DictionaryManagement {
 
     public static Word[] dic;
+    public static  void insertFromFile() {
+        System.out.println("No      |English        |Vietnamese");
+        try {
+            Path path = Path.of("D:\\OOP\\TuDien.txt");
+            List<String> dictionary_data = Files.readAllLines(path);
+            for (String word_data : dictionary_data) {
+                String[] data = word_data.split("\\s", 2);
+                Word word = new Word();
+                word.word_target = data[0];
+                word.word_explain = data[1];
+
+                System.out.println("        |" + word.word_target + "        |" + word.word_explain);
+            }
+        } catch (IOException e) {}
+    }
     public static void insertFromCommanline() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Nhap so tu: ");
