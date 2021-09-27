@@ -1,24 +1,52 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Arrays;
-public class DictionaryManagement {
+import java.nio.file.*;
+import java.util.*;
+import java.io.*;
+import java.util.Dictionary;
 
+public class DictionaryManagement {
     public static Word[] dic;
-    public static  void insertFromFile() {
-        System.out.println("No      |English        |Vietnamese");
+    public static void insertFromFile() {
         try {
             Path path = Path.of("D:\\OOP\\TuDien.txt");
             List<String> dictionary_data = Files.readAllLines(path);
+            int num = dictionary_data.size();
+            dic = new Word[num];
+            int pos = 0;
+            String x, y;
             for (String word_data : dictionary_data) {
                 String[] data = word_data.split("\\s", 2);
-                Word word = new Word();
-                word.word_target = data[0];
-                word.word_explain = data[1];
-
-                System.out.println("        |" + word.word_target + "        |" + word.word_explain);
+                x = data[0];
+                y = data[1];
+                dic[pos] = new Word(x, y);
+                pos++;
+            }
+        } catch (IOException e) {}
+    }
+    public static void dictionaryLookup() {
+        try {
+            Scanner sc = new Scanner(System.in);
+            Path path = Path.of("D:\\OOP\\TuDien.txt");
+            List<String> dictionary_data = Files.readAllLines(path);
+            while (true) {
+                System.out.println("Tu can tim: ");
+                String search = sc.next();
+                int num = dictionary_data.size();
+                dic = new Word[num];
+                int pos = 0;
+                String x, y;
+                for (String word_data : dictionary_data) {
+                    String[] data = word_data.split("\\s", 2);
+                    x = data[0];
+                    y = data[1];
+                    dic[pos] = new Word(x, y);
+                    if (dic[pos].getWord_target().contains(search)) {
+                        System.out.format("%-7s %-15s %-15s",
+                                "",
+                                "|" + dic[pos].getWord_target(),
+                                "|" + dic[pos].getWord_explain());
+                        System.out.println();
+                    }
+                }
             }
         } catch (IOException e) {}
     }
@@ -27,28 +55,26 @@ public class DictionaryManagement {
         System.out.println("Nhap so tu: ");
 
         int num = Integer.parseInt(scan.nextLine());
-        Word[] dic = new Word[num];
+        dic = new Word[num];
         int pos = 0;
         while (num != 0) {
-            dic[pos] = new Word();
             String x, y;
             System.out.println("nhap tu TA so "+(pos+1)+": ");
             x = scan.nextLine();
             System.out.println("Nhap tu TV so "+(pos+1)+": ");
             y = scan.nextLine();
-            dic[pos].setData(x, y);
+            dic[pos] = new Word(x, y);
             num--;
             pos++;
         }
     }
     public static void showAllWord() {
         System.out.println("No      |English        |Vietnamese");
-
-        for(int i=0; i<dic.length; i++){
+        for(int i = 0; i< dic.length; i++){
             System.out.format("%-7s %-15s %-15s",
                     i+1,
-                    "|" + dic[i].word_target,
-                    "|" + dic[i].word_explain);
+                    "|" + dic[i].getWord_target(),
+                    "|" + dic[i].getWord_explain());
             System.out.println();
         }
     }
