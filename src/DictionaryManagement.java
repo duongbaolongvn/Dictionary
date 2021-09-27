@@ -45,7 +45,10 @@ public class DictionaryManagement {
         System.out.println("No      |English        |Vietnamese");
 
         for(int i=0; i<dic.length; i++){
-            System.out.println((i+1)+"       |"+dic[i].word_target+"         |"+dic[i].word_explain);
+            System.out.format("%-7s %-15s %-15s",
+                    i+1,
+                    "|" + dic[i].word_target,
+                    "|" + dic[i].word_explain);
             System.out.println();
         }
     }
