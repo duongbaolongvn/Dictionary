@@ -23,7 +23,7 @@ public class DictionaryManagement {
         }
     }
     public static void showAllWord() {
-        System.out.println("Nu      |English        |Vietnamese");
+        System.out.println("No      |English        |Vietnamese");
 
         for(int i=0; i<dic.length; i++){
             System.out.println((i+1)+"       |"+dic[i].word_target+"         |"+dic[i].word_explain);
