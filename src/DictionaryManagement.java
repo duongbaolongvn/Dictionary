@@ -27,7 +27,7 @@ public class DictionaryManagement {
         System.out.println("Nhap so tu: ");
 
         int num = Integer.parseInt(scan.nextLine());
-        dic = new Word[num];
+        Word[] dic = new Word[num];
         int pos = 0;
         while (num != 0) {
             dic[pos] = new Word();
