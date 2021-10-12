@@ -9,7 +9,8 @@ public class DictionaryCommandline {
         DictionaryManagement.dictionaryLookup();
     }
     public static void main(String[] args) {
-        dictionaryAdvanced();
+        DictionaryManagement.insertFromFile();
+        DictionaryManagement.dictionaryExportToFile();
     }
 }
 

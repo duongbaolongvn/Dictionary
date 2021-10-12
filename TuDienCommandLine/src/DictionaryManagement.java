@@ -66,5 +66,15 @@ public class DictionaryManagement {
             System.out.println();
         }
     }
+    public static void dictionaryExportToFile() {
+        try {
+            FileWriter fw = new FileWriter("D:\\OOP\\Output.txt");
+            for(int i = 0; i< dic.length; i++){
+                fw.write(dic[i].getWord_target() + "\t" + dic[i].getWord_explain());
+                fw.write("\n");
+            }
+            fw.close();
+        } catch (IOException e) {}
+    }
 
 }
