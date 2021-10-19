@@ -1,0 +1,6 @@
+Hello	Xin chao
+House	Ngoi nha
+Dog	Con cho to
+Transport	Phuong tien van chuyen
+Translate	Dich
+Transform	Bien hinh
