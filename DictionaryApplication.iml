@@ -13,20 +13,9 @@
     <orderEntry type="library" name="jl1.0" level="project" />
     <orderEntry type="library" name="gtranslateapi-1.0" level="project" />
     <orderEntry type="library" name="java-google-speech-api-V2.0" level="project" />
-    <orderEntry type="library" name="Maven: net.sf.sociaal:freetts:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:mac:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:mac:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:mac:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:15" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:mac:15" level="project" />
-    <orderEntry type="library" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="JavaFxDictionary" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="javafx" level="application" />
+    <orderEntry type="library" name="gtranslateapi-1.0" level="project" />
   </component>
 </module>

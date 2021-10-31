@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
-    public final static String path = "Assets/test.txt";
+    public final static String path = "/Assets/test.txt";
 
     public static void main(String[] args) {
         launch(args);
